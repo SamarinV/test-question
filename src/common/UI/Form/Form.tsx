@@ -20,14 +20,12 @@ const Form = ({ question, restartTest, clickAnswerButton }: Props) => {
 
   const initialValues: FormValues = question.type === "checkbox" ? { answers: [] } : { answers: "" }
 
-  const validationSchema =
-    question.type === "checkbox"
-      ? Yup.object({
-          answers: Yup.array().of(Yup.string().required("Обязательно")),
-        })
-      : Yup.object({
-          answers: Yup.string().required("Обязательно"),
-        })
+  const validationSchema = Yup.object().shape({
+    answers:
+      question.type === "checkbox"
+        ? Yup.array().of(Yup.string().required("Обязательно")).nullable()
+        : Yup.string().required("Обязательно").nullable(),
+  })
 
   const formik = useFormik<FormValues>({
     initialValues,
