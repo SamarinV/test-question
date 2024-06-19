@@ -1,0 +1,9 @@
+.time {
+	border: 1px solid black;
+	margin-left: 2rem;
+	padding: 0 4px;
+}
+.time-end {
+	border-color: red;
+	color: red;
+}

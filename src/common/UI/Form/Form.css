@@ -1,0 +1,83 @@
+.checkbox-container {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	margin-top: 1rem;
+}
+
+/* Checkbox */
+.checkbox-container input[type="checkbox"] {
+	opacity: 0;
+	position: absolute;
+}
+
+.custom-checkbox {
+	width: 20px;
+	height: 20px;
+	border: 2px solid black;
+	border-radius: 2px;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin-right: 8px;
+}
+
+.checkbox-container input[type="checkbox"]:checked+.custom-checkbox {
+	background: red;
+}
+
+/* Radio */
+.checkbox-container input[type="radio"] {
+	opacity: 0;
+	position: absolute;
+}
+
+.custom-radio {
+	width: 20px;
+	height: 20px;
+	border: 2px solid black;
+	border-radius: 50%;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin-right: 8px;
+}
+
+.checkbox-container input[type="radio"]:checked+.custom-radio {
+	background: red;
+}
+
+/*Input small text*/
+.text-container {
+	display: flex;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+.text-container input[type="text"] {
+	width: 300px;
+	padding: 0.5rem;
+	border: 2px solid black;
+	border-radius: 4px;
+}
+
+/* Button */
+.submit-button {
+	background-color: rgb(255, 0, 85);
+	color: white;
+	padding: 0.5rem;
+	margin-top: 2rem;
+	border-radius: 0.2rem;
+	border: none;
+	width: 6rem;
+	cursor: pointer;
+}
+
+.submit-button:disabled {
+	background-color: rgba(255, 0, 85, 0.424);
+	cursor: default;
+}
